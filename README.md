@@ -1,6 +1,6 @@
 # scribe
 
-[![ci](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
+[![CI](https://github.com/ShaneMcGovern/scribe/actions/workflows/ci.yml/badge.svg)](https://github.com/ShaneMcGovern/scribe/actions/workflows/ci.yml)
 
 Style-aware Chatbot via Retraining using Instruction-less Base model Embedding
 
