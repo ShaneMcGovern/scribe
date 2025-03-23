@@ -81,3 +81,11 @@ force-wrap-aliases = true
 [tool.ruff.lint.flake8-annotations]
 # allow *args: Any, **kwargs: Any
 allow-star-arg-any = true
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

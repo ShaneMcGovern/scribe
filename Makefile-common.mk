@@ -49,7 +49,8 @@ pyright: node_modules $(venv)
 
 ## run tests
 test: $(venv)
-	$(venv)/bin/pytest
+	$(venv)/bin/coverage report
+	$(venv)/bin/coverage run -m pytest
 
 ## build python distribution
 dist: $(venv)
