@@ -6,7 +6,7 @@ on:
 
 jobs:
   lint-typecheck-test:
-    name: Check code quality and run tests
+    name: Code Quality & Tests
     runs-on: ubuntu-latest
 
     steps:
