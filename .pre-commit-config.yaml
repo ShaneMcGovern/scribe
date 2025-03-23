@@ -1,10 +1,12 @@
 # unless otherwise specified, hooks run on push only
 default_stages: [pre-push]
+
 repos:
   - repo: https://github.com/crate-ci/typos
     rev: v1.30.0
     hooks:
       - id: typos
+
   # formatters and linters are available in the virtualenv so they can be run from the makefile & vscode
   - repo: local
     hooks:
@@ -14,21 +16,38 @@ repos:
         language: system
         types: [python]
         require_serial: true
+
       - id: ruff-format
         name: ruff-format
         entry: .venv/bin/ruff format
         language: system
         types: [python]
         require_serial: true
+
       - id: pyright
         name: pyright
         entry: pyright
         language: node
         types: [python]
+
       - id: test
         name: test
         entry: .venv/bin/pytest
-        # run on all files
         pass_filenames: false
         language: system
         types: [python]
+
+  # YAML linting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.32.0
+    hooks:
+      - id: yamllint
+
+  # TOML and JSON syntax checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-toml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
