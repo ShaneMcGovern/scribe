@@ -13,6 +13,7 @@ dev = [
     "pytest~=8.0",
     "ruff~=0.9.4",
     "twine~=6.0",
+    "coverage~=7.7"
 ]
 
 [build-system]
