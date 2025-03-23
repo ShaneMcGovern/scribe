@@ -1,3 +1,4 @@
+---
 # unless otherwise specified, hooks run on push only
 default_stages: [pre-push]
 
@@ -7,7 +8,8 @@ repos:
     hooks:
       - id: typos
 
-  # formatters and linters are available in the virtualenv so they can be run from the makefile & vscode
+  # formatters and linters are available in the
+  # virtualenv so they can be run from the makefile & vscode
   - repo: local
     hooks:
       - id: ruff
@@ -45,7 +47,7 @@ repos:
 
   # TOML and JSON syntax checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
       - id: check-toml
       - id: check-json
