@@ -1,3 +1,4 @@
+---
 # unless otherwise specified, hooks run on push only
 default_stages: [pre-push]
 repos:
@@ -20,11 +21,6 @@ repos:
         language: system
         types: [python]
         require_serial: true
-      - id: pyright
-        name: pyright
-        entry: pyright
-        language: node
-        types: [python]
       - id: test
         name: test
         entry: .venv/bin/pytest
@@ -32,3 +28,7 @@ repos:
         pass_filenames: false
         language: system
         types: [python]
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.397
+    hooks:
+      - id: pyright
