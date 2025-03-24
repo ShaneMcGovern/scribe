@@ -1,3 +1,4 @@
+---
 # unless otherwise specified, hooks run on push only
 default_stages: [pre-push]
 repos:
@@ -30,4 +31,4 @@ repos:
   - repo: https://github.com/RobertCraigie/pyright-python
     rev: v1.1.397
     hooks:
-    - id: pyright        
+      - id: pyright
